@@ -21,7 +21,7 @@ public class ThamsappPosts : MonoBehaviour {
 		"I tripped over a", "AGAIN! Stupid",
 		"are the best",
 		"I love my", "19-6-2010 never forget",
-		"Wow check out this"
+		"Wow check out this" 
 	};
 
 	public string[] myHalfPosts =
@@ -34,19 +34,52 @@ public class ThamsappPosts : MonoBehaviour {
 		"Why stay ",
 		"I need some ",
 		"I hate it when ",
-		"Why is there a ",
-		"I'm rooting for my home team the "
+		"I'm rooting for my home team the ",
+		"I'm the man of the ",
+		"I'm dancing with my ",
+		"I fell in love with a ",
+		"Keano scratched his hairy back with his ",
+		"I kissed a ",
+		"Never again shall I lick this crazy ", 
+		"I just completed hugging my ",
+		"Cleaning my ",
+		"Ha! I won an internet argument against ",
+		"My fursona is a ",
+		"Just go this ",
+		"Only 90's kids will remember ",
+		"Like if you want to have sex with a ",
+		"I just got kicked in the groin by a full-blown ",
+		"Man, I wanna get shitfaced and hump ",
+		"I could enjoy some ",
+		"Just fuck my"
+
 	};
 
 	public string[] mySecondHalfPosts =
 	{
 		" it's so crazy",
-		" is cured",
+		" this made me unconfortable",
 		" for 12 hours",
 		" what a disgrace",
 		" I could never be happier",
 		" I'm getting too old for this",
-		" at this tailgate?",
+		" I feel enligthend",
+		" I guess it's accepted in some cultures...",
+		" I'm never drinking again",
+		" and I liked it",
+		" It's just not right",
+		" I wish I could get a degree in this...",
+		" thorough",
+		" makes me feel euphoric",
+		"kin",
+		" I will write a book about this",
+		" I wish my life was more exciting",
+		" this is why i voet trump!",
+		" for every like I will do it again",
+		" I wish I could die already",
+		" Linkin Park sang about this"
+
+
 	};
 
 

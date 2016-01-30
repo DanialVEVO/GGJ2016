@@ -9,7 +9,6 @@ public class SubjectList : MonoBehaviour {
 		"drama",
 		"gender",
 		"bleep",
-		"quality",
 		"rain",
 		"stepson",
 		"television",
@@ -23,7 +22,32 @@ public class SubjectList : MonoBehaviour {
 		"South-America",
 		"toy",
 		"typhoon",
-		"yodler"
+		"yodler",
+		"white-supremacist",
+		"hockysticks",
+		"hammer",
+		"white women",
+		"crazy boy",
+		"Keano",
+		"lubed jellyjar",
+		"coconut oil",
+		"banana",
+		"bradwurst",
+		"microphone",
+		"dildo",
+		"Meatswipe",
+		"Yodlbirdz",
+		"banker",
+		"Jeroen's baby",
+		"South-African folk singers",
+		"nature",
+		"spikey apples",
+		"My Little Pony hentai doushinji",
+		"your moms buttabplog",
+		"weird hentai written by O.J. Simpson",
+		"Occulus Rift",
+		"goats"
+
 	};
 
 	// Use this for initialization
