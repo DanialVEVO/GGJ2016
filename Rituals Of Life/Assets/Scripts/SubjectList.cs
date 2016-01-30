@@ -46,7 +46,10 @@ public class SubjectList : MonoBehaviour {
 		"your moms buttabplog",
 		"weird hentai written by O.J. Simpson",
 		"Occulus Rift",
-		"goats"
+		"goats",
+		"Pokemon",
+		"Pickachu",
+		"Global Game Jam 2016"
 
 	};
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ThamsappPosts : MonoBehaviour {
+public class PostCreator : MonoBehaviour {
 
 	public int 		halfPostVar;
 	public int		nounVar;
