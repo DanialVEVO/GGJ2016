@@ -15,7 +15,7 @@ public class ThumbsApp : MonoBehaviour {
 
     void OnEnable()
     {
-        Debug.Log("we are in foreground again.");
+        
     }
 
     /*void OnApplicationPause(bool pause)

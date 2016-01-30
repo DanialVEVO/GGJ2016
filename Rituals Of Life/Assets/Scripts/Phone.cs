@@ -6,6 +6,8 @@ public class Phone : TouchReceiver {
     [SerializeField]
     Vector2 notificationSpeed = new Vector2(0.1f, 3.0f);
 
+    float timeTillNextNot = 3.0f;
+
     [SerializeField]
     GameObject[] Apps;
 
@@ -17,15 +19,29 @@ public class Phone : TouchReceiver {
     int currentApp = 0;
 
 
+
     // Use this for initialization
     void Start () {
 
         notifications = new int[Apps.Length];
+
+        for (int i = 0; i < notifications.Length; i++)
+            notifications[i] = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+        timeTillNextNot -= Time.deltaTime;
+        if (timeTillNextNot < 0)
+        {
+            notifications[Random.Range(0, notifications.Length)] += 1;
+
+            for (int i = 0; i < notifications.Length; i++)
+                Debug.Log(notifications[i]);
+
+            timeTillNextNot = Random.Range(notificationSpeed.x, notificationSpeed.y);
+        }
 	}
 
     void ChangeApp(int nextApp)
