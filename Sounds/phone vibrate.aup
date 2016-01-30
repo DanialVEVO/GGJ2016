@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="phone vibrate_data" version="1.3.0" audacityversion="2.1.0" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="28.6069841270" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds">
+	<tags/>
+	<wavetrack name="Audiospoor" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1938560">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000f68.au" len="262144" min="-0.129211" max="0.127777" rms="0.044059"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0000ecb.au" len="262144" min="-0.131439" max="0.134216" rms="0.042557"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000560.au" len="262144" min="-0.297455" max="0.406311" rms="0.043396"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0000fec.au" len="262144" min="-0.06781" max="0.090027" rms="0.009905"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0000ff7.au" len="262144" min="-0.062012" max="0.069305" rms="0.020847"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e0000a00.au" len="262144" min="-0.069244" max="0.076538" rms="0.01605"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0000700.au" len="262144" min="-0.175568" max="0.179932" rms="0.0405"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0000114.au" len="103552" min="-0.117615" max="0.163574" rms="0.026316"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Audiospoor" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1938560">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000b21.au" len="262144" min="-0.129211" max="0.127777" rms="0.044059"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e000030a.au" len="262144" min="-0.13147" max="0.134216" rms="0.042557"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e00002da.au" len="262144" min="-0.297455" max="0.406311" rms="0.043396"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0000751.au" len="262144" min="-0.067841" max="0.090057" rms="0.009905"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e000018f.au" len="262144" min="-0.062042" max="0.069305" rms="0.020847"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e0000182.au" len="262144" min="-0.069275" max="0.076538" rms="0.01605"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0000ee7.au" len="262144" min="-0.175568" max="0.179932" rms="0.0405"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0000332.au" len="103552" min="-0.117615" max="0.163574" rms="0.026316"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
