@@ -12,19 +12,10 @@ public class ScoreScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print(objectsDestroyed);
-        if (calcScore == true)
-        {
-            for (int i = 1; i <= objectsDestroyed; i++)
-            {
-                Score();
-            }
-            calcScore = false;
-        }
+
 	}
 
     void Score(){
-        int damage = Random.Range(300, 2000);
-        totalDamage = totalDamage + damage;
+
     }
 }

@@ -48,7 +48,6 @@ public class CameraShake : MonoBehaviour
         if (other.GetComponent<Rigidbody>()==null)
         {
             DoShake();
-            print("shake");
         }
     }
 }
