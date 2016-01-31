@@ -16,9 +16,10 @@ public class Phone : TouchReceiver {
 
     int[] notifications;
 
+    [SerializeField]
     int currentApp = 0;
 
-
+    bool lastTurnActiveState = false;
 
     // Use this for initialization
     void Start () {
@@ -46,11 +47,15 @@ public class Phone : TouchReceiver {
 
     void ChangeApp(int nextApp)
     {
-       
+
+        currentApp = 0;
 
         for (int i = 0; i < Apps.Length; i++)
             if (i == nextApp)
+            {
                 Apps[i].SetActive(true);
+                currentApp = i+1;
+            }
             else
                 Apps[i].SetActive(false);
 
@@ -67,34 +72,47 @@ public class Phone : TouchReceiver {
             for (int i = 0; i < TouchAreas.Length; i++)
             {
                 if (hit.collider.gameObject == TouchAreas[i])
-                    ChangeApp(i);
+                    if(currentApp == 0 || i == TouchAreas.Length-1)
+                        ChangeApp(i);
             }
         }
-
-       /* for (int i = 0; i < TouchAreas.Length; i++)
-        {
-            Debug.Log(fingerPlacement);
-
-            // if (fingerPlacement.x < TouchAreas[i].GetComponent<Collider>().bounds.max.x && fingerPlacement.x > TouchAreas[i].GetComponent<Collider>().bounds.min.x )//&&
-            //fingerPlacement.y < TouchAreas[i].GetComponent<Collider>().bounds.max.y && fingerPlacement.y > TouchAreas[i].GetComponent<Collider>().bounds.min.y)
-            
-
-            
-        }*/
+              
 
     }
 
-    public void update()
+    public void SetNotifications(GameObject App, int difference)
     {
+        for (int i = 0; i < Apps.Length; i++)
+            if (Apps[i] == App)
+                notifications[i] += difference;
+    }
 
+    public void GetNotifications(GameObject App, out int NotifAmount)
+    {
+        
+        int amount = 0;
+
+        for (int i = 0; i < Apps.Length; i++)
+        {
+            if (Apps[i] == App)
+                amount = notifications[i];
+
+        }
+
+        Debug.Log("amount of notifications = " + amount);
+
+        NotifAmount = amount;
+
+        return;
     }
 
     new public void LateUpdate()
     {
 
-        if (fingerActive)
+        if (fingerActive && !lastTurnActiveState)
             checkForHit();
-        
+
+        lastTurnActiveState = fingerActive;
 
         base.LateUpdate();
     }

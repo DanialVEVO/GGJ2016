@@ -3,7 +3,10 @@ using System.Collections;
 
 public class TouchReceiver : MonoBehaviour {
 
+    [HideInInspector]
     public Vector2 fingerPlacement = Vector2.zero;
+
+    [HideInInspector]
     public bool fingerActive = false;
 
    
