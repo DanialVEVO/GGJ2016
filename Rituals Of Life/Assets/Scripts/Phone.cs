@@ -39,6 +39,8 @@ public class Phone : TouchReceiver {
         {
             notifications[Random.Range(0, notifications.Length)] += 1;
 
+
+            
             //for (int i = 0; i < notifications.Length; i++)
              //   Debug.Log(notifications[i]);
 
