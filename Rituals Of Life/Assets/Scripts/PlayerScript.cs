@@ -30,6 +30,8 @@ public class PlayerScript : MonoBehaviour {
     
     float phoneLook = 0.0f;
 
+    bool stop = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -149,6 +151,9 @@ public class PlayerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        if (stop)
+            return;
 
         Walking();
 

@@ -6,6 +6,7 @@ public class EndScript : MonoBehaviour {
     bool rotateCamera = false;
     bool moveCamera = false;
     public GameObject player;
+    public GameObject phone;
 	// Use this for initialization
 	void Start () {
 	
@@ -40,6 +41,8 @@ public class EndScript : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
+        phone.GetComponent<Phone>().NotificationWarning.SetActive(false);
+        phone.SetActive(false);
         other.GetComponent<CameraShake>().enabled = false;
         other.GetComponent<PlayerScript>().enabled = false;
         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().enabled = false;

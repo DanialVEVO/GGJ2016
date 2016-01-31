@@ -20,12 +20,14 @@ public class Phone : TouchReceiver {
     [SerializeField]
     int currentApp = 0;
 
-    [SerializeField]
-    GameObject NotificationWarning;
+    //[SerializeField]
+    public GameObject NotificationWarning;
 
     bool lastTurnActiveState = false;
 
     float warningTimer = 1.0f;
+
+    public bool stop = false;
 
     // Use this for initialization
     void Start () {
@@ -40,6 +42,9 @@ public class Phone : TouchReceiver {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (stop)
+            return;
 
         timeTillNextNot -= Time.deltaTime;
         if (timeTillNextNot < 0)
