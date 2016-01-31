@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Phone : TouchReceiver {
 
@@ -38,8 +39,11 @@ public class Phone : TouchReceiver {
         {
             notifications[Random.Range(0, notifications.Length)] += 1;
 
-            for (int i = 0; i < notifications.Length; i++)
-                Debug.Log(notifications[i]);
+            //for (int i = 0; i < notifications.Length; i++)
+             //   Debug.Log(notifications[i]);
+
+            if(currentApp == 0)
+                UpdateNotifications();
 
             timeTillNextNot = Random.Range(notificationSpeed.x, notificationSpeed.y);
         }
@@ -59,6 +63,16 @@ public class Phone : TouchReceiver {
             else
                 Apps[i].SetActive(false);
 
+        if (currentApp == 0)
+        {
+            for (int i = 0; i < TouchAreas.Length; i++)
+                TouchAreas[i].SetActive(true);
+
+            UpdateNotifications();
+        }
+        else
+            for (int i = 0; i < TouchAreas.Length-1; i++)
+                TouchAreas[i].SetActive(false);
     }
 
     void checkForHit()
@@ -87,10 +101,20 @@ public class Phone : TouchReceiver {
                 notifications[i] += difference;
     }
 
-    public void GetNotifications(GameObject App, out int NotifAmount)
+    public void GetNotifications(out int NotifAmount, GameObject App = null)
     {
         
         int amount = 0;
+
+        if (App == null)
+        {
+            for (int i = 0; i < Apps.Length; i++)
+                amount += notifications[i];
+
+            NotifAmount = amount;
+
+            return;
+        }
 
         for (int i = 0; i < Apps.Length; i++)
         {
@@ -104,6 +128,12 @@ public class Phone : TouchReceiver {
         NotifAmount = amount;
 
         return;
+    }
+
+    void UpdateNotifications()
+    {
+        for (int i = 0; i < TouchAreas.Length - 1; i++)
+            TouchAreas[i].GetComponentInChildren<Text>().text = (notifications[i].ToString());
     }
 
     new public void LateUpdate()

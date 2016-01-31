@@ -10,15 +10,7 @@ public class ThumbsApp : MonoBehaviour {
     [SerializeField]
     int notif = 0;
 
-    // Use this for initialization
-    void Start () {
-       
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-    }
+    
 
     void AddPost()
     {
@@ -75,7 +67,7 @@ public class ThumbsApp : MonoBehaviour {
         int newNotif = 0;
         int oldNotif = notif;
 
-        GetComponentInParent<Phone>().GetNotifications(gameObject, out newNotif);
+        GetComponentInParent<Phone>().GetNotifications( out newNotif, gameObject);
 
         //Debug.Log("new motif = " + newNotif + ". notif = " + notif);
 
