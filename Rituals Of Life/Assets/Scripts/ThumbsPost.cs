@@ -67,7 +67,7 @@ public class ThumbsPost : TouchReceiver {
         "de Koning: "
     };
 
-    public string[] myPosts = new string[]
+    /*public string[] myPosts = new string[]
     {
         "My", "just died",
         "I hate my boss, he is such a",
@@ -81,7 +81,7 @@ public class ThumbsPost : TouchReceiver {
         "are the best",
         "I love my", "19-6-2010 never forget",
         "Wow check out this"
-    };
+    };*/
 
     public string[] myHalfPosts = new string[]
     {
@@ -194,11 +194,7 @@ public class ThumbsPost : TouchReceiver {
 
     }
     
-    /*void CreateSentence()
-    {
-        
-        createdPost = fname[Random.Range(0, fname.Length)] + lname[Random.Range(0, lname.Length)] + myHalfPosts[Random.Range(0, myHalfPosts.Length)] + mySubjects[Random.Range(0, mySubjects.Length)] + mySecondHalfPosts[Random.Range(0, mySecondHalfPosts.Length)];
-    }*/
+    
 
     void checkForHit()
     {
