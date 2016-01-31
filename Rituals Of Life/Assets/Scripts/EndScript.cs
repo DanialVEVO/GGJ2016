@@ -7,6 +7,8 @@ public class EndScript : MonoBehaviour {
     bool moveCamera = false;
     public GameObject player;
     public GameObject phone;
+
+    bool triggered = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,7 +16,7 @@ public class EndScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (player.transform.position.z >= 88.0f)
+        if (triggered)
         {
             Camera.main.GetComponent<PhoneNeglectEffect>().enabled = false;
             Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Bloom>().bloomIntensity = 0.02f;
@@ -36,11 +38,15 @@ public class EndScript : MonoBehaviour {
         }
         if (moveCamera == true && player.transform.position.z >= 0)
         {
+            player.GetComponent<ScoreScript>().showThumb();
             player.transform.Translate(0, 0, -1.0f * Time.deltaTime * 3);
         }
     }
     void OnTriggerEnter(Collider other)
     {
+        int rest = 0;
+        phone.GetComponent<Phone>().GetNotifications(out rest);
+        other.GetComponent<ScoreScript>().notificationsLeft = rest;
         phone.GetComponent<Phone>().NotificationWarning.SetActive(false);
         phone.SetActive(false);
         other.GetComponent<CameraShake>().enabled = false;
@@ -50,5 +56,7 @@ public class EndScript : MonoBehaviour {
         var phoneImage = other.GetComponent<PlayerScript>().phoneImage;
         phoneImage.GetComponent<RectTransform>().anchoredPosition = Vector3.down * 1080;
         rotateCamera = true;
+        triggered = true;
+        other.GetComponent<ScoreScript>().CalcAndShowScore();
     }
 }
