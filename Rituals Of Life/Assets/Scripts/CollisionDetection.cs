@@ -20,11 +20,13 @@ public class CollisionDetection : MonoBehaviour {
 		if (other.GetComponent<Rigidbody>().isKinematic == true){
 			return;
 		}
-		var rigidBodies = this.GetComponentsInChildren<Rigidbody>();
+        other.GetComponent<ScoreScript>().objectsDestroyed++;
+        var rigidBodies = this.GetComponentsInChildren<Rigidbody>();
 		foreach (Rigidbody R in rigidBodies){
 			R.isKinematic = false;
 		}
         GetComponent<Collider>().enabled = false;
+        
 
     }
 }
