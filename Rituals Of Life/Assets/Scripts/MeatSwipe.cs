@@ -93,9 +93,19 @@ public class MeatSwipe : TouchReceiver
         GetComponentInParent<Phone>().GetNotifications(out notif, gameObject);
 
         if (notif == 0)
+        {
             GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().sprite = null;
+
+            GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().color = new Vector4(1,1,1,0);
+
+        }
         else
+        { 
             GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().sprite = faces[Random.Range(0, faces.Length)];
+
+            GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().color = new Vector4(1, 1, 1, 1);
+
+        }
 
         //Debug.Log("new motif = " + newNotif + ". notif = " + notif);
 
@@ -130,11 +140,22 @@ public class MeatSwipe : TouchReceiver
             {
                 GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(-400, 0);
 
+
                 if (notif == 0)
+                {
                     GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().sprite = null;
+
+                    GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().color = new Vector4(1, 1, 1, 0);
+
+                }
                 else
-                    GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().sprite = faces[Random.Range(0,faces.Length)];
-                
+                {
+                    GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().sprite = faces[Random.Range(0, faces.Length)];
+
+                    GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().color = new Vector4(1, 1, 1, 1);
+
+                }
+
             }
             if (GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition.x < -100)
                 GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = Vector3.Slerp(GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition, Vector3.zero, 8 * Time.deltaTime);
