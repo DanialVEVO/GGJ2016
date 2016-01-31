@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 734c50da546b2cc42aaa8ac7ee00dc18
+timeCreated: 1454148983
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bench_Leg1
+    100004: Bench_Leg2
+    100006: Bench_Leg3
+    100008: Bench_Leg4
+    100010: Bench_Top
+    100012: polySurface29
+    100014: transform1
+    100016: Bench2
+    100018: Bench3
+    100020: Bench4
+    100022: Bench5
+    100024: Bench6
+    100026: BenchLeg1
+    100028: BenchLeg2
+    100030: BenchLeg3
+    100032: BenchLeg4
+    100034: polySurface64
+    100036: polySurface65
+    400000: //RootNode
+    400002: Bench_Leg1
+    400004: Bench_Leg2
+    400006: Bench_Leg3
+    400008: Bench_Leg4
+    400010: Bench_Top
+    400012: polySurface29
+    400014: transform1
+    400016: Bench2
+    400018: Bench3
+    400020: Bench4
+    400022: Bench5
+    400024: Bench6
+    400026: BenchLeg1
+    400028: BenchLeg2
+    400030: BenchLeg3
+    400032: BenchLeg4
+    400034: polySurface64
+    400036: polySurface65
+    2300000: //RootNode
+    2300002: Bench_Leg1
+    2300004: Bench_Leg2
+    2300006: Bench_Leg3
+    2300008: Bench_Leg4
+    2300010: Bench_Top
+    2300012: polySurface29
+    2300014: Bench2
+    2300016: Bench3
+    2300018: Bench4
+    2300020: Bench5
+    2300022: Bench6
+    2300024: BenchLeg1
+    2300026: BenchLeg2
+    2300028: BenchLeg3
+    2300030: BenchLeg4
+    2300032: polySurface64
+    2300034: polySurface65
+    3300000: //RootNode
+    3300002: Bench_Leg1
+    3300004: Bench_Leg2
+    3300006: Bench_Leg3
+    3300008: Bench_Leg4
+    3300010: Bench_Top
+    3300012: polySurface29
+    3300014: Bench2
+    3300016: Bench3
+    3300018: Bench4
+    3300020: Bench5
+    3300022: Bench6
+    3300024: BenchLeg1
+    3300026: BenchLeg2
+    3300028: BenchLeg3
+    3300030: BenchLeg4
+    3300032: polySurface64
+    3300034: polySurface65
+    4300000: Bench
+    4300002: polySurface29
+    4300004: Bench_Leg2
+    4300006: Bench_Top
+    4300008: Bench_Leg4
+    4300010: Bench_Leg3
+    4300012: Bench_Leg1
+    4300014: Bench2
+    4300016: Bench6
+    4300018: Bench4
+    4300020: polySurface64
+    4300022: polySurface65
+    4300024: BenchLeg3
+    4300026: Bench5
+    4300028: Bench3
+    4300030: BenchLeg2
+    4300032: BenchLeg1
+    4300034: BenchLeg4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,10 +20,17 @@ public class Phone : TouchReceiver {
     [SerializeField]
     int currentApp = 0;
 
+    [SerializeField]
+    GameObject NotificationWarning;
+
     bool lastTurnActiveState = false;
+
+    float warningTimer = 1.0f;
 
     // Use this for initialization
     void Start () {
+
+        NotificationWarning.SetActive(false);
 
         notifications = new int[Apps.Length];
 
@@ -39,7 +46,7 @@ public class Phone : TouchReceiver {
         {
             notifications[Random.Range(0, notifications.Length)] += 1;
 
-
+            NotificationWarning.SetActive(true);
             
             //for (int i = 0; i < notifications.Length; i++)
              //   Debug.Log(notifications[i]);
@@ -48,6 +55,17 @@ public class Phone : TouchReceiver {
                 UpdateNotifications();
 
             timeTillNextNot = Random.Range(notificationSpeed.x, notificationSpeed.y);
+        }
+
+        if (NotificationWarning.activeSelf == true)
+        {
+            warningTimer -= Time.deltaTime;
+
+            if (warningTimer < 0)
+            {
+                warningTimer = 1.0f;
+                NotificationWarning.SetActive(false);
+            }
         }
 	}
 

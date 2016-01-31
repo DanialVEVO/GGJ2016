@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: 61bba5afb3d0d1249b168cfa38b66cc0
+timeCreated: 1454149074
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Glass1
+    100002: Glass1 1
+    100004: Glass1 2
+    100006: Glass1 3
+    100008: Glass1 4
+    100010: Glass2
+    100012: Glass2 1
+    100014: Glass2 2
+    100016: Glass2 3
+    100018: Glass2 4
+    100020: Glass3
+    100022: Glass3 1
+    100024: Glass3 2
+    100026: Glass3 3
+    100028: Glass3 4
+    100030: Glass4
+    100032: Glass4 1
+    100034: Glass4 2
+    100036: Glass4 3
+    100038: Glass4 4
+    100040: Glass5
+    100042: Glass5 1
+    100044: Glass5 2
+    100046: Glass5 3
+    100048: Glass5 4
+    100050: Glass6
+    100052: Glass6 1
+    100054: Glass6 2
+    100056: Glass6 3
+    100058: Glass6 4
+    100060: Glass7
+    100062: Glass7 1
+    100064: Glass7 2
+    100066: Glass7 3
+    100068: Glass7 4
+    100070: Glass8
+    100072: Glass8 1
+    100074: Glass8 2
+    100076: Glass8 3
+    100078: Glass8 4
+    100080: Glass9
+    100082: Glass9 1
+    100084: Glass9 2
+    100086: Glass9 3
+    100088: Glass9 4
+    100090: //RootNode
+    100092: group1
+    100094: group2
+    100096: group3
+    100098: group4
+    100100: group5
+    400000: Glass1
+    400002: Glass1 1
+    400004: Glass1 2
+    400006: Glass1 3
+    400008: Glass1 4
+    400010: Glass2
+    400012: Glass2 1
+    400014: Glass2 2
+    400016: Glass2 3
+    400018: Glass2 4
+    400020: Glass3
+    400022: Glass3 1
+    400024: Glass3 2
+    400026: Glass3 3
+    400028: Glass3 4
+    400030: Glass4
+    400032: Glass4 1
+    400034: Glass4 2
+    400036: Glass4 3
+    400038: Glass4 4
+    400040: Glass5
+    400042: Glass5 1
+    400044: Glass5 2
+    400046: Glass5 3
+    400048: Glass5 4
+    400050: Glass6
+    400052: Glass6 1
+    400054: Glass6 2
+    400056: Glass6 3
+    400058: Glass6 4
+    400060: Glass7
+    400062: Glass7 1
+    400064: Glass7 2
+    400066: Glass7 3
+    400068: Glass7 4
+    400070: Glass8
+    400072: Glass8 1
+    400074: Glass8 2
+    400076: Glass8 3
+    400078: Glass8 4
+    400080: Glass9
+    400082: Glass9 1
+    400084: Glass9 2
+    400086: Glass9 3
+    400088: Glass9 4
+    400090: //RootNode
+    400092: group1
+    400094: group2
+    400096: group3
+    400098: group4
+    400100: group5
+    2300000: Glass1
+    2300002: Glass1 1
+    2300004: Glass1 2
+    2300006: Glass1 3
+    2300008: Glass1 4
+    2300010: Glass2
+    2300012: Glass2 1
+    2300014: Glass2 2
+    2300016: Glass2 3
+    2300018: Glass2 4
+    2300020: Glass3
+    2300022: Glass3 1
+    2300024: Glass3 2
+    2300026: Glass3 3
+    2300028: Glass3 4
+    2300030: Glass4
+    2300032: Glass4 1
+    2300034: Glass4 2
+    2300036: Glass4 3
+    2300038: Glass4 4
+    2300040: Glass5
+    2300042: Glass5 1
+    2300044: Glass5 2
+    2300046: Glass5 3
+    2300048: Glass5 4
+    2300050: Glass6
+    2300052: Glass6 1
+    2300054: Glass6 2
+    2300056: Glass6 3
+    2300058: Glass6 4
+    2300060: Glass7
+    2300062: Glass7 1
+    2300064: Glass7 2
+    2300066: Glass7 3
+    2300068: Glass7 4
+    2300070: Glass8
+    2300072: Glass8 1
+    2300074: Glass8 2
+    2300076: Glass8 3
+    2300078: Glass8 4
+    2300080: Glass9
+    2300082: Glass9 1
+    2300084: Glass9 2
+    2300086: Glass9 3
+    2300088: Glass9 4
+    3300000: Glass1
+    3300002: Glass1 1
+    3300004: Glass1 2
+    3300006: Glass1 3
+    3300008: Glass1 4
+    3300010: Glass2
+    3300012: Glass2 1
+    3300014: Glass2 2
+    3300016: Glass2 3
+    3300018: Glass2 4
+    3300020: Glass3
+    3300022: Glass3 1
+    3300024: Glass3 2
+    3300026: Glass3 3
+    3300028: Glass3 4
+    3300030: Glass4
+    3300032: Glass4 1
+    3300034: Glass4 2
+    3300036: Glass4 3
+    3300038: Glass4 4
+    3300040: Glass5
+    3300042: Glass5 1
+    3300044: Glass5 2
+    3300046: Glass5 3
+    3300048: Glass5 4
+    3300050: Glass6
+    3300052: Glass6 1
+    3300054: Glass6 2
+    3300056: Glass6 3
+    3300058: Glass6 4
+    3300060: Glass7
+    3300062: Glass7 1
+    3300064: Glass7 2
+    3300066: Glass7 3
+    3300068: Glass7 4
+    3300070: Glass8
+    3300072: Glass8 1
+    3300074: Glass8 2
+    3300076: Glass8 3
+    3300078: Glass8 4
+    3300080: Glass9
+    3300082: Glass9 1
+    3300084: Glass9 2
+    3300086: Glass9 3
+    3300088: Glass9 4
+    4300000: Glass1
+    4300002: Glass2
+    4300004: Glass3
+    4300006: Glass4
+    4300008: Glass5
+    4300010: Glass6
+    4300012: Glass7
+    4300014: Glass8
+    4300016: Glass9
+    4300018: Glass1
+    4300020: Glass2
+    4300022: Glass3
+    4300024: Glass4
+    4300026: Glass5
+    4300028: Glass6
+    4300030: Glass7
+    4300032: Glass8
+    4300034: Glass9
+    4300036: Glass1
+    4300038: Glass2
+    4300040: Glass3
+    4300042: Glass4
+    4300044: Glass5
+    4300046: Glass6
+    4300048: Glass7
+    4300050: Glass8
+    4300052: Glass9
+    4300054: Glass1
+    4300056: Glass2
+    4300058: Glass3
+    4300060: Glass4
+    4300062: Glass5
+    4300064: Glass6
+    4300066: Glass7
+    4300068: Glass8
+    4300070: Glass9
+    4300072: Glass1
+    4300074: Glass2
+    4300076: Glass3
+    4300078: Glass4
+    4300080: Glass5
+    4300082: Glass6
+    4300084: Glass7
+    4300086: Glass8
+    4300088: Glass9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

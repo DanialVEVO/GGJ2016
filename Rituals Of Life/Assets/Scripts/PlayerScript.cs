@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour {
     float lookUpSpeed = 4.0f;
 
     [SerializeField]
-    Image phoneImage;
+    public Image phoneImage;
 
     [SerializeField]
     Image finger;
@@ -82,7 +82,7 @@ public class PlayerScript : MonoBehaviour {
             nextPos -= new Vector2(0,Input.GetAxis("RightY"));       
 
 
-        finger.GetComponent<RectTransform>().anchoredPosition += nextPos*fingerSpeed;
+        finger.GetComponent<RectTransform>().anchoredPosition += nextPos*fingerSpeed*Time.deltaTime;
 
 
 
@@ -118,10 +118,32 @@ public class PlayerScript : MonoBehaviour {
             Camera.main.transform.Rotate((maxCameraAngle * phoneLook) - Camera.main.transform.rotation.eulerAngles.x, 0, 0);
             phoneImage.GetComponent<RectTransform>().anchoredPosition = Vector3.down * 1080 * (1-phoneLook);
         }
-            
+
         if (phoneLook >= 1.0f)
+        {
             PhoneActive();
-                    
+            Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().enabled = true;
+            if (Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().blurSpread <= 0.5f)
+            {
+                Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().blurSpread += 0.1f * Time.deltaTime*10;
+            }
+            Camera.main.GetComponent<PhoneNeglectEffect>().insaneValue = 0;
+            Camera.main.transform.eulerAngles = new Vector3(45, 0, 0);
+        }
+        else
+        {
+            if (Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().blurSpread >= 0.1f)
+            {
+                Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().blurSpread -= 0.1f * Time.deltaTime*10;
+            }
+            else
+            {
+                Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().enabled = false;
+                Camera.main.GetComponent<PhoneNeglectEffect>().insaneValue += Time.deltaTime*0.5f;
+            }
+        }
+        if (phoneLook ==0.0f) Camera.main.transform.eulerAngles = new Vector3(0, 0, 0);
+
     }
 
 
