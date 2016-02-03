@@ -16,7 +16,6 @@ public class rotation : MonoBehaviour
 		transform.Rotate(nextRotate);
 
 		openneer+=Time.deltaTime;
-		//this.gameObject.transform.position=new Vector3(this.transform.position.x,openneer,this.transform.position.z);
 		this.gameObject.transform.position=new Vector3(this.transform.position.x, (Mathf.Sin(openneer)*0.1f)+0.85f,this.transform.position.z);
 	}
 }
