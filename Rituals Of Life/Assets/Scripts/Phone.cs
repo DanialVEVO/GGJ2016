@@ -149,7 +149,7 @@ public class Phone : TouchReceiver {
 
         }
 
-        Debug.Log("amount of notifications = " + amount);
+        //Debug.Log("amount of notifications = " + amount);
 
         NotifAmount = amount;
 

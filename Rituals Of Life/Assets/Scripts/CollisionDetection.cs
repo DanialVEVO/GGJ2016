@@ -31,37 +31,37 @@ public class CollisionDetection : MonoBehaviour {
         GetComponent<Collider>().enabled = false;
         if(this.gameObject.tag=="Garbage")
         {
-            print("Garbage");
+            //print("Garbage");
             player.GetComponent<ScoreScript>().totalDamage += 100;
             GetComponentInParent<AudioSource>().Play();
         }
         if (this.gameObject.tag == "Bench")
         {
-            print("Bench");
+            //print("Bench");
             player.GetComponent<ScoreScript>().totalDamage += 250;
             GetComponentInParent<AudioSource>().Play();
         }
         if (this.gameObject.tag == "Shallot")
         {
-            print("Shallot");
+            //print("Shallot");
             player.GetComponent<ScoreScript>().totalDamage += 3250;
             GetComponentInParent<AudioSource>().Play();
         }
         if (this.gameObject.tag == "Showcase")
         {
-            print("Showcase");
+            //print("Showcase");
             player.GetComponent<ScoreScript>().totalDamage += 11500;
             GetComponentInParent<AudioSource>().Play();
         }
         if (this.gameObject.tag == "ModernArt")
         {
-            print("ModernArt");
+            //print("ModernArt");
             player.GetComponent<ScoreScript>().totalDamage += 1325;
             GetComponentInParent<AudioSource>().Play();
         }
         if (this.gameObject.tag == "Stanchion")
         {
-            print("Stancion");
+            //print("Stancion");
             player.GetComponent<ScoreScript>().totalDamage += 1325;
             GetComponentInParent<AudioSource>().Play();
         }

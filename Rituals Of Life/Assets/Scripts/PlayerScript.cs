@@ -26,6 +26,8 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     float fingerSpeed = 3.0f;
 
+    Vector4 fingerBorder = new Vector4(-200, 200, 0, 1000);
+
     bool fingerActive = false;
     
     float phoneLook = 0.0f;
@@ -42,7 +44,7 @@ public class PlayerScript : MonoBehaviour {
 
     void Walking()
     {
-        Vector2 maxSpeedUpdated = new Vector2(maxSpeed.x * Mathf.Abs(Input.GetAxis("LeftX")), maxSpeed.y * Mathf.Abs(1-Mathf.Clamp(Input.GetAxis("LeftY"), 0.0f, 1.0f)));
+        Vector2 maxSpeedUpdated = new Vector2(maxSpeed.x * Mathf.Abs(Input.GetAxis("LeftX")), maxSpeed.y * Mathf.Abs(1-Mathf.Clamp(Input.GetAxis("LeftY"), 0.0f, 0.5f)));
 
         Vector2 nextPos = Vector2.zero;
 
@@ -50,7 +52,7 @@ public class PlayerScript : MonoBehaviour {
             nextPos += new Vector2(Input.GetAxis("LeftX"), 0);
 
         if (GetComponent<Rigidbody>().velocity.z < maxSpeedUpdated.y)
-            nextPos += new Vector2(0, 1-Mathf.Clamp(Input.GetAxis("LeftY"), 0.0f, 1.0f));
+            nextPos += new Vector2(0, 1 - Mathf.Clamp(Input.GetAxis("LeftY"), 0.0f, 0.5f));
        
 
         GetComponent<Rigidbody>().AddForce(new Vector3(nextPos.x,0,nextPos.y) * acceleration * 100 * Time.deltaTime);
@@ -77,14 +79,31 @@ public class PlayerScript : MonoBehaviour {
             finger.transform.GetChild(1).GetComponent<Image>().color = new Color(1, 1, 1, 0);
         }
 
-        if (Mathf.Abs(Input.GetAxis("RightX")) == 1)
+       // if (Mathf.Abs(Input.GetAxis("RightX")) == 1)
             nextPos += new Vector2(Input.GetAxis("RightX"),0);
 
-        if (Mathf.Abs(Input.GetAxis("RightY")) == 1)
-            nextPos -= new Vector2(0,Input.GetAxis("RightY"));       
+       // if (Mathf.Abs(Input.GetAxis("RightY")) == 1)
+            nextPos -= new Vector2(0,Input.GetAxis("RightY"));
 
 
-        finger.GetComponent<RectTransform>().anchoredPosition += nextPos*fingerSpeed*Time.deltaTime;
+        
+        //nextpos is defined, now make sure it doesn't go beyond limit and set the rest.
+        nextPos = finger.GetComponent<RectTransform>().anchoredPosition + (nextPos * fingerSpeed * Time.deltaTime);
+
+        if (nextPos.x < fingerBorder.x)
+            nextPos.x = fingerBorder.x;
+
+        if (nextPos.x > fingerBorder.y)
+            nextPos.x = fingerBorder.y;
+
+        if (nextPos.y < fingerBorder.z)
+            nextPos.y = fingerBorder.z;
+
+        if (nextPos.y > fingerBorder.w)
+            nextPos.y = fingerBorder.w;
+
+
+        finger.GetComponent<RectTransform>().anchoredPosition = nextPos;
 
 
 
@@ -95,7 +114,7 @@ public class PlayerScript : MonoBehaviour {
 
         foreach (TouchReceiver t in activeTouchObjects)
         {
-            t.FingerPlacement(finger.GetComponent<RectTransform>().position);
+            t.FingerPlacement(finger.GetComponent<RectTransform>().position, finger.GetComponent<RectTransform>().anchoredPosition);
         }
     }
 

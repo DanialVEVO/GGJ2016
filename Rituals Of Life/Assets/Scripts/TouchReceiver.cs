@@ -7,13 +7,17 @@ public class TouchReceiver : MonoBehaviour {
     public Vector2 fingerPlacement = Vector2.zero;
 
     [HideInInspector]
+    public Vector2 fingerAnchoredPlacement = Vector2.zero;
+
+    [HideInInspector]
     public bool fingerActive = false;
 
    
 
-    public void FingerPlacement(Vector3 newPlacement)
+    public void FingerPlacement(Vector3 newPlacement, Vector2 newAnchoredPlacement)
     {
         fingerPlacement = newPlacement;
+        fingerAnchoredPlacement = newAnchoredPlacement;
         fingerActive = true;
     }
 

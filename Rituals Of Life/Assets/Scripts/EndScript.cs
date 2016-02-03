@@ -38,9 +38,9 @@ public class EndScript : MonoBehaviour {
         }
         if (moveCamera == true && player.transform.position.z >= 0)
         {
-            player.GetComponent<ScoreScript>().showThumb();
-            player.transform.Translate(0, 0, -1.0f * Time.deltaTime * 3);
+            player.transform.Translate(0, 0, -1.0f * Time.deltaTime * 5);
         }
+        if (moveCamera == true && player.transform.position.z <=0.1f) player.GetComponent<ScoreScript>().showThumb();
     }
     void OnTriggerEnter(Collider other)
     {

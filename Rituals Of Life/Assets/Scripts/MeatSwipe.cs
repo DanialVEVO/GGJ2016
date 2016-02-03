@@ -70,16 +70,18 @@ public class MeatSwipe : TouchReceiver
 
     void Swiping()
     {
-        GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2((fingerPlacement.x - startSwipePos)*2, 0);
+        GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2((fingerAnchoredPlacement.x - startSwipePos), 0);
 
-        if (fingerPlacement.x - startSwipePos > 100)
+        if (fingerAnchoredPlacement.x - startSwipePos > 200)
         {            
 
             GetComponentInParent<Phone>().SetNotifications(gameObject, -1);
 
             notif--;
 
-             reset = true;
+            reset = true;
+
+            startSwipePos = 2000000;
 
         }
     }
@@ -121,10 +123,10 @@ public class MeatSwipe : TouchReceiver
         if (fingerActive && !lastTurnActiveState)
         {
             lastTurnActiveState = true;
-            startSwipePos = fingerPlacement.x;
+            startSwipePos = fingerAnchoredPlacement.x;
         }
 
-        if (fingerActive && reset == false)
+        if (fingerActive && reset == false && startSwipePos < 20000)
             Swiping();
         else if (reset == false)
         {
