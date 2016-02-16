@@ -59,6 +59,8 @@ public class Yodl : MonoBehaviour {
         notif--;
 
         Destroy(delPost);
+
+        OnEnable();
     }
 
 
@@ -70,6 +72,9 @@ public class Yodl : MonoBehaviour {
         GetComponentInParent<Phone>().GetNotifications(out newNotif, gameObject);
 
         //Debug.Log("new motif = " + newNotif + ". notif = " + notif);
+
+        if(newNotif == 0)
+            GetComponentInParent<Phone>().ExpandHomeButton();
 
         for (int i = 0; i < newNotif - oldNotif; i++)
             AddPost();

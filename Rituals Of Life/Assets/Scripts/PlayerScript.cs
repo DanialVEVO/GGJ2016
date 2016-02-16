@@ -157,10 +157,14 @@ public class PlayerScript : MonoBehaviour {
             {
                 Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().blurSpread -= 0.1f * Time.deltaTime*10;
             }
-            else
+            else if(Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().enabled)
             {
                 Camera.main.GetComponent<UnityStandardAssets.ImageEffects.Blur>().enabled = false;
-                Camera.main.GetComponent<PhoneNeglectEffect>().insaneValue += Time.deltaTime*0.5f;
+                //Camera.main.GetComponent<PhoneNeglectEffect>().insaneValue += Time.deltaTime*0.5f;
+                int newValue = 0;
+                phoneImage.GetComponent<Phone>().GetNotifications(out newValue);
+                Camera.main.GetComponent<PhoneNeglectEffect>().insaneValue = Mathf.Clamp(newValue / 2.0f, 0.0f, 10.0f);
+
             }
         }
         if (phoneLook ==0.0f) Camera.main.transform.eulerAngles = new Vector3(0, 0, 0);

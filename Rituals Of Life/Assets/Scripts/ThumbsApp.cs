@@ -59,6 +59,8 @@ public class ThumbsApp : MonoBehaviour {
         notif--;
 
         Destroy(delPost);
+
+        OnEnable();
     }
 
 
@@ -70,6 +72,8 @@ public class ThumbsApp : MonoBehaviour {
         GetComponentInParent<Phone>().GetNotifications( out newNotif, gameObject);
 
         //Debug.Log("new motif = " + newNotif + ". notif = " + notif);
+        if (newNotif == 0)
+            GetComponentInParent<Phone>().ExpandHomeButton();
 
         for (int i = 0; i < newNotif - oldNotif; i++)
             AddPost();

@@ -94,6 +94,11 @@ public class Phone : TouchReceiver {
             for (int i = 0; i < TouchAreas.Length; i++)
                 TouchAreas[i].SetActive(true);
 
+            TouchAreas[TouchAreas.Length-1].GetComponent<BoxCollider>().size = new Vector2(450, 130);
+
+            TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Text>().enabled = false;
+            TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Image>().enabled = false;
+
             UpdateNotifications();
         }
         else
@@ -115,10 +120,20 @@ public class Phone : TouchReceiver {
                     if(currentApp == 0 || i == TouchAreas.Length-1)
                         ChangeApp(i);
             }
-        }
-              
+        }             
 
     }
+
+    public void ExpandHomeButton()
+    {
+
+        TouchAreas[TouchAreas.Length-1].GetComponent<BoxCollider>().size = new Vector2(450, 1830);
+
+        TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Text>().enabled = true;
+        TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Image>().enabled = true;
+
+    }
+
 
     public void SetNotifications(GameObject App, int difference)
     {
@@ -160,6 +175,10 @@ public class Phone : TouchReceiver {
     {
         for (int i = 0; i < TouchAreas.Length - 1; i++)
             TouchAreas[i].GetComponentInChildren<Text>().text = (notifications[i].ToString());
+
+        int newValue = 0;
+        GetNotifications(out newValue);
+        Camera.main.GetComponent<PhoneNeglectEffect>().insaneValue = Mathf.Clamp( newValue / 2.0f, 0.0f , 10.0f);
     }
 
     new public void LateUpdate()

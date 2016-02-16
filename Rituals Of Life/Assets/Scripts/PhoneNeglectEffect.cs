@@ -52,7 +52,7 @@ public class PhoneNeglectEffect : MonoBehaviour {
             maxBlur1 = 0.02f * recoverValue;
             if (bloomValue >=0.02f)
             {
-                bloomValue = bloomValue - 0.01f * Time.deltaTime * decreaseSpeed*5;
+                bloomValue = bloomValue - 0.01f * Time.deltaTime * decreaseSpeed*20;
                 GetComponent<UnityStandardAssets.ImageEffects.Bloom>().bloomIntensity = bloomValue;
             }
             if (blurValue1>=0.1f)

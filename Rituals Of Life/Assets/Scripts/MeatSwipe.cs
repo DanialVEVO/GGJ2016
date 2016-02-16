@@ -100,6 +100,8 @@ public class MeatSwipe : TouchReceiver
 
             GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().color = new Vector4(1,1,1,0);
 
+            GetComponentInParent<Phone>().ExpandHomeButton();
+
         }
         else
         { 
@@ -142,6 +144,8 @@ public class MeatSwipe : TouchReceiver
             {
                 GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(-400, 0);
 
+                OnEnable();
+                /*
 
                 if (notif == 0)
                 {
@@ -156,7 +160,7 @@ public class MeatSwipe : TouchReceiver
 
                     GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<Image>().color = new Vector4(1, 1, 1, 1);
 
-                }
+                }*/
 
             }
             if (GetComponentInChildren<Mask>().transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition.x < -100)
