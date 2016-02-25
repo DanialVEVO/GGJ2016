@@ -27,7 +27,8 @@ public class Phone : TouchReceiver {
 
     float warningTimer = 1.0f;
 
-    public bool stop = false;
+    [HideInInspector]
+    public bool stop = true;
 
     // Use this for initialization
     void Start () {
@@ -96,8 +97,10 @@ public class Phone : TouchReceiver {
 
             TouchAreas[TouchAreas.Length-1].GetComponent<BoxCollider>().size = new Vector2(450, 130);
 
-            TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Text>().enabled = false;
-            TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Image>().enabled = false;
+            //TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Text>().enabled = false;
+            //TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Image>().enabled = false;
+            TouchAreas[TouchAreas.Length - 1].transform.GetChild(0).GetComponent<Image>().enabled = false;
+            TouchAreas[TouchAreas.Length - 1].transform.GetChild(1).GetComponent<Image>().enabled = false;
 
             UpdateNotifications();
         }
@@ -129,8 +132,11 @@ public class Phone : TouchReceiver {
 
         TouchAreas[TouchAreas.Length-1].GetComponent<BoxCollider>().size = new Vector2(450, 1830);
 
-        TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Text>().enabled = true;
-        TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Image>().enabled = true;
+        //TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Text>().enabled = true;
+        //TouchAreas[TouchAreas.Length-1].GetComponentInChildren<Image>().enabled = true;
+
+        TouchAreas[TouchAreas.Length - 1].transform.GetChild(0).GetComponent<Image>().enabled = true;
+        TouchAreas[TouchAreas.Length - 1].transform.GetChild(1).GetComponent<Image>().enabled = true;
 
     }
 
